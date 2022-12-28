@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" th:replace="userbase::Layout(~{::section})">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  </head>
+  <body>
+    
+
+    <section class="banner justify-content-center align-items-center">
+    
+    
+    
+      
+          <!-- Wrapper container -->
+<div class="container py-4 mt-5">
+  <h1>add contact</h1>
+  
+    <div th:if="${session.message}"  class="container">
+
+        <div th:classappend="${'alert-'+session.message.type}" class="alert" role="alert">
+            <span th:text="${session.message.content}"></span>
+            
+            <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+           </div>
+
+
+
+    </div>
+  
+    <!-- Bootstrap 5 starter form -->
+    <form id="contactForm" th:object="${contact}" th:action="@{/user/processcontact}" method="post">
+    
+    
+    
+  
+      <!-- Name input -->
+      <div class="mb-3">
+        <label class="form-label"  for="name">Name</label>
+        <input class="form-control" id="name" required="true" type="text" name="name" placeholder="Name" data-sb-validations="required" />
+        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+      </div>
+<!-- ter secind name -->
+      <div class="mb-3">
+        <label class="form-label" for="name">Nick Name</label>
+        <input class="form-control" required="true" id="secondname" name="secondname" type="text" placeholder="Second Name" data-sb-validations="required" />
+        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+      </div>
+
+      <!-- work-->
+      <div class="mb-3">
+        <label class="form-label" for="name">Work</label>
+        <input class="form-control" required="true" id="work" type="text" name="work" placeholder="Work.." data-sb-validations="required" />
+        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+      </div>
+        <!-- work-->
+        <div class="mb-3">
+            <label class="form-label" for="name">Phone</label>
+            <input class="form-control" required="true" id="phone" name="phone"  type="text" placeholder="Enter your phone number.." data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+          </div>
+
+      <div class="mb-3">
+            <label class="form-label" for="name">Image url</label>
+            <input class="form-control" required="true" id="image" name="image"  type="text" placeholder="image link.." data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+          </div>
+
+  
+      <!-- Email address input -->
+      <div class="mb-3">
+        <label class="form-label" for="emailAddress">Email Address</label>
+        <input class="form-control" id="emailAddress" required="true" type="email" name="email" placeholder="Email Address" data-sb-validations="required, email" />
+        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+      </div>
+  
+      <!-- Message input -->
+      <div class="mb-3">
+        <label class="form-label" for="message">Description</label>
+        <textarea class="form-control" id="message" required="true" type="text" name="description" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+        <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+      </div>
+  
+      <!-- Form submissions success message -->
+      <div class="d-none" id="submitSuccessMessage">
+        <div class="text-center mb-3">Form submission successful!</div>
+      </div>
+  
+      <!-- Form submissions error message -->
+      <div class="d-none" id="submitErrorMessage">
+        <div class="text-center text-danger mb-3">Error sending message!</div>
+      </div>
+  
+      <!-- Form submit button -->
+      <div class="d-grid">
+        <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+      </div>
+  
+    </form>
+  
+  </div>
+      
+      
+    
+
+ 
+    
+    </section>
+    
+    
+    
+
+   
+</html>

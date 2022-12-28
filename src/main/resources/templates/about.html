@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" th:replace="userbase::Layout(~{::section})">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  </head>
+  <body>
+    
+
+    <section >
+  
+    
+    <div class="container" style="padding-top: 121px">
+          <img src="https://picsum.photos/200" alt="">
+      
+          <h5 class="card-title ">User Profile</h5>
+          
+           <p class="card-text"  >Name:  <span th:text="${user.name}"> </span></p>
+           <p class="card-text"  >ID:  <span th:text="${user.id}"> </span></p>
+          <h5 class="card-title " >Email:  <span th:text="${user.email}"> </span></h5>
+          <p class="card-text"  >work:  <span th:text="${user.about}"> </span></p>
+          <p class="card-text"  >Role:  <span th:text="${user.role}"> </span></p>
+            
+          
+     </div>
+      
+      
+    </section>
+
+   
+</html>

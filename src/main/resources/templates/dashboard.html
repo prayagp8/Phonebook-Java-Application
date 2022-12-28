@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" th:replace="userbase::Layout(~{::section})">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  </head>
+  <body>
+    
+    <section>
+   
+      
+<div class="card w-50 py-6 mt-5">
+  <div class="card-body">
+    <h5 class="card-title">Count</h5>
+    <p class="card-text">Contact Count in Database <span th:text="${count}"></span></p>
+    <a href="#" class="btn btn-primary-disabled">Button</a>
+  </div>
+</div>
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">Users</h5>
+    <p class="card-text">User Count in Database <span th:text="${users}"></span></p>
+    <a href="#" class="btn btn-primary-disabled">Button</a>
+  </div>
+</div>
+
+
+      
+    
+
+ 
+    
+    </section>
+    
+    
+    
+
+   
+</html>
